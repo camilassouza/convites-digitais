@@ -1,0 +1,22 @@
+{
+  "slug": "matteo-enrique",
+  "clientName": "Matteo Enrique",
+  "eventTitle": "Aniversário do Matteo",
+  "eventType": "Aniversário",
+  "date": "2026-08-20T18:00:00",
+  "description": "Venha comemorar esse dia especial com muito carinho, alegria e diversão.",
+  "whatsapp": "5511999999999",
+  "location": {
+    "name": "Buffet Encanto Kids",
+    "address": "Rua das Flores, 123 - São Paulo",
+    "mapLink": "https://maps.google.com"
+  },
+  "colors": {
+    "primary": "#7C5CFF",
+    "secondary": "#FFF3D6",
+    "accent": "#FF8A65",
+    "text": "#2B2B2B",
+    "background": "#FFFDF8"
+  },
+  "cssFile": "matteo-enrique"
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "maria-julia",
+  "clientName": "Maria Julia",
+  "eventTitle": "Casamento Maria & Lucas",
+  "eventType": "Casamento",
+  "date": "2026-11-15T16:00:00",
+  "description": "Com alegria convidamos você para celebrar nossa união.",
+  "whatsapp": "5511988887777",
+  "location": {
+    "name": "Espaço Verona",
+    "address": "Av. das Palmeiras, 500 - São Paulo",
+    "mapLink": "https://maps.google.com"
+  },
+  "colors": {
+    "primary": "#B76E79",
+    "secondary": "#FDF2F4",
+    "accent": "#D4AF37",
+    "text": "#4B2C35",
+    "background": "#FFF9FA"
+  },
+  "cssFile": "maria-julia"
+}

@@ -1,0 +1,160 @@
+.client-matteo-enrique {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 201, 102, 0.35), transparent 30%),
+    linear-gradient(180deg, #fff8df 0%, #f2e3b3 45%, #d8b875 100%);
+  overflow-x: hidden;
+}
+
+.client-matteo-enrique .hero {
+  position: relative;
+  min-height: 92vh;
+  padding: 90px 24px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 248, 223, 0.35), rgba(255, 248, 223, 0.8)),
+    url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 45% 45% / 0 0 8% 8%;
+}
+
+.client-matteo-enrique .hero::before {
+  content: '🦒';
+  position: absolute;
+  top: 70px;
+  left: 8%;
+  font-size: 70px;
+  transform: rotate(-8deg);
+}
+
+.client-matteo-enrique .hero::after {
+  content: '🦁';
+  position: absolute;
+  bottom: 70px;
+  right: 10%;
+  font-size: 76px;
+  transform: rotate(8deg);
+}
+
+.client-matteo-enrique .hero h1 {
+  max-width: 780px;
+  color: #5b3a1e;
+  font-size: clamp(42px, 8vw, 86px);
+  line-height: 0.95;
+  text-shadow: 0 4px 0 rgba(255, 255, 255, 0.65);
+}
+
+.client-matteo-enrique .hero h2 {
+  color: #2f5d33;
+  font-size: clamp(30px, 5vw, 54px);
+  background: #fff3bf;
+  padding: 10px 24px;
+  border: 3px solid #8f5f2f;
+  border-radius: 999px;
+  box-shadow: 0 8px 0 rgba(91, 58, 30, 0.22);
+}
+
+.client-matteo-enrique .hero p {
+  max-width: 560px;
+  color: #4a321d;
+  font-size: 19px;
+  font-weight: 700;
+  background: rgba(255, 248, 223, 0.88);
+  padding: 16px 22px;
+  border-radius: 24px;
+}
+
+.client-matteo-enrique .countdown {
+  position: relative;
+  margin: -50px auto 24px;
+  max-width: 760px;
+  background: #fff7d6;
+  border: 4px solid #8f5f2f;
+  border-radius: 32px;
+  box-shadow: 0 14px 0 rgba(91, 58, 30, 0.22);
+}
+
+.client-matteo-enrique .countdown h3 {
+  color: #2f5d33;
+  font-size: 28px;
+}
+
+.client-matteo-enrique .counter {
+  color: #b66a18;
+  font-size: clamp(28px, 6vw, 46px);
+}
+
+.client-matteo-enrique .event-info {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.client-matteo-enrique .card {
+  background: #fff8df;
+  border: 3px dashed #8f5f2f;
+  box-shadow: 0 12px 0 rgba(91, 58, 30, 0.16);
+}
+
+.client-matteo-enrique .card h3 {
+  color: #2f5d33;
+  font-size: 26px;
+}
+
+.client-matteo-enrique .card p {
+  color: #4a321d;
+  font-weight: 600;
+}
+
+.client-matteo-enrique .card a {
+  display: inline-block;
+  margin-top: 14px;
+  background: #2f5d33;
+  color: #fff8df;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.client-matteo-enrique .confirmation {
+  margin: 20px auto 0;
+  max-width: 760px;
+  background: #f4c75b;
+  border-radius: 36px 36px 0 0;
+  border: 4px solid #8f5f2f;
+}
+
+.client-matteo-enrique .confirmation h3 {
+  color: #5b3a1e;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.client-matteo-enrique .confirm-button {
+  background: #2f5d33;
+  color: white;
+  box-shadow: 0 8px 0 rgba(91, 58, 30, 0.28);
+}
+
+@media (max-width: 640px) {
+  .client-matteo-enrique .hero::before {
+    top: 40px;
+    left: 20px;
+    font-size: 52px;
+  }
+
+  .client-matteo-enrique .hero::after {
+    right: 24px;
+    bottom: 48px;
+    font-size: 56px;
+  }
+
+  .client-matteo-enrique .countdown {
+    margin: -35px 16px 24px;
+  }
+}
