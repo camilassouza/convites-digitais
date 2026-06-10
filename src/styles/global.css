@@ -1,5 +1,10 @@
 @import './clients/matteo-enrique.css';
 
+body {
+  font-family: 'Montserrat', sans-serif !important;
+    margin: 0;
+}
+
 .invite-page {
   min-height: 100vh;
   background: var(--color-background);
