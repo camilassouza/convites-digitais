@@ -7,21 +7,19 @@
 }
 
 .client-matteo-enrique .hero {
-  position: relative;
-  min-height: 92vh;
-  padding: 90px 24px 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  text-align: center;
-  background:
-    linear-gradient(rgba(255, 248, 223, 0.35), rgba(255, 248, 223, 0.8)),
-    url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1600&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 0 45% 45% / 0 0 8% 8%;
+    position: relative;
+    min-height: 92vh;
+    padding: 90px 24px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 45% 45% / 0 0 8% 8%;
+    background: #7ff3ff;
 }
 
 .client-matteo-enrique .hero::before {

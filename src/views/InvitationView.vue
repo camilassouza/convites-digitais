@@ -16,8 +16,8 @@ import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import invites from '../data/invites';
 
-import SafariTheme from '../components/Safari.vue';
-import DefaultTheme from '../components/DefaultTheme.vue';
+import SafariTheme from '../themes/Safari/Safari.vue';
+import DefaultTheme from '../themes/Default/DefaultTheme.vue';
 
 const route = useRoute();
 
