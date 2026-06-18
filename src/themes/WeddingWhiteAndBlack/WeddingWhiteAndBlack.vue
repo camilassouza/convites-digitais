@@ -5,8 +5,9 @@
       @click="nextSection">
       <div class="is-content section-envelope">
         <div class="envelope-card" :class="{ opening: leavingSection === 1 }">
+            <span><img src="./img/logo-png-2.png"/></span>
+
           <div class="envelope-ribbon">
-            <span></span>
           </div>
         </div>
       </div>
@@ -25,7 +26,9 @@
       @click="nextSection">
       <div class="is-content section-2">
         <p class="font-default-brittany main-script">Venha celebrar conosco esse dia especial</p>
-        <div class="image-placeholder photo">Foto</div>
+        <div class="image-placeholder photo">
+          <img src="./img/nos.png" />
+        </div>
       </div>
     </section>
 
@@ -110,7 +113,9 @@
 
     <section class="invite-section" :class="{ active: currentSection === 9 }">
       <div class="is-content section-8">
-        <div class="image-placeholder logo final-logo">YC</div>
+        <div class="image-placeholder logo final-logo">
+          <img src="./img/logo-png-2.png"/>
+        </div>
       </div>
     </section>
   </div>

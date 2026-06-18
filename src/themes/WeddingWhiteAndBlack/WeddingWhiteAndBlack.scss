@@ -111,6 +111,13 @@ p {
   z-index: 20;
   transform-origin: left center;
   backface-visibility: hidden;
+
+  img {
+    width: 220px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+  }
 }
 
 .envelope-card.opening {
@@ -187,8 +194,15 @@ p {
   p {
     width: 210px;
     margin: auto;
+    margin-top: 40px;
   }
 
+  img {
+    width: 270px;
+    position: absolute;
+    bottom: -10px;
+    left: 34px;
+  }
   .photo-placeholder {
     width: 220px;
     height: 260px;
@@ -342,5 +356,15 @@ p {
       position: absolute;
       right: 0;
     }
+  }
+}
+
+.section-8 {
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 100%;
   }
 }
