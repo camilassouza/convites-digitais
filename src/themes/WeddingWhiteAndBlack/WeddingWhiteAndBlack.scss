@@ -21,24 +21,50 @@ p {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  perspective: 1400px;
+  background-image: url(./img/bg.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .invite-section {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100vh;
   display: none;
   place-items: center;
-  background-image: url(./img/bg.png);
-  cursor: pointer;
-  border: solid 10px;
   width: calc(100% - 20px);
   height: calc(100% - 20px);
+  border: solid 10px #000;
+  background-image: url(./img/bg.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transform-origin: left center;
+  backface-visibility: hidden;
 }
 
 .invite-section.active {
   display: grid;
+  z-index: 2;
+}
+
+.invite-section.leaving {
+  display: grid;
+  z-index: 5;
+}
+
+.invite-section.leaving:not(:first-child) {
+  animation: pageOpen 0.8s ease forwards;
+}
+
+@keyframes pageOpen {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(-95deg);
+  }
 }
 
 .is-content {
@@ -51,6 +77,63 @@ p {
   font-family: 'Brittany';
   font-size: 40px;
 }
+
+/* Envelope */
+
+.section-envelope {
+  display: grid;
+  place-items: center;
+}
+
+.envelope-card {
+  position: absolute;
+  left: -9px;
+  width: 95%;
+  max-width: 360px;
+  height: 88%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 12px 12px 18px rgba(0, 0, 0, 0.25);
+  z-index: 20;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.envelope-card.opening {
+  animation: envelopePaperOpen 0.8s ease forwards;
+}
+
+@keyframes envelopePaperOpen {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(-110deg);
+  }
+}
+
+.envelope-ribbon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 48%;
+  height: 24px;
+  background: linear-gradient(90deg, #111, #555, #111);
+  z-index: 3;
+}
+
+.envelope-ribbon span {
+  position: absolute;
+  right: 16%;
+  top: 50%;
+  width: 90px;
+  height: 70px;
+  transform: translateY(-50%);
+  background: url(./img/bow.png) center / contain no-repeat;
+}
+
+/* Section 1 */
 
 .section-1 {
   display: grid;
@@ -80,10 +163,73 @@ p {
   }
 }
 
+/* Section 2 */
+
 .section-2 {
+  display: grid;
+  place-items: center;
+  text-align: center;
+
   p {
-        text-align: center;
     width: 210px;
     margin: auto;
+  }
+
+  .photo-placeholder {
+    width: 220px;
+    height: 260px;
+    border: 1px solid #000;
+    border-radius: 90px 90px 0 0;
+    display: grid;
+    place-items: center;
+  }
+}
+
+/* Section 3 */
+
+.section-3 {
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  .date-number,
+  .date-month {
+    font-family: 'Maharlika';
+    line-height: 0.85;
+  }
+
+  .date-number {
+    font-size: 130px;
+  }
+
+  .date-month {
+    font-size: 90px;
+  }
+
+  .hour {
+    font-size: 28px;
+  }
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+
+  div {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 8px;
+    min-width: 45px;
+  }
+
+  strong {
+    display: block;
+    font-size: 18px;
+  }
+
+  span {
+    font-size: 10px;
   }
 }
