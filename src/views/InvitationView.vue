@@ -17,16 +17,21 @@ import { useRoute } from 'vue-router';
 import invites from '../data/invites';
 
 import SafariTheme from '../themes/Safari/Safari.vue';
+import weddingWhiteAndBlack from '../themes/WeddingWhiteAndBlack/WeddingWhiteAndBlack.vue';
 import DefaultTheme from '../themes/Default/DefaultTheme.vue';
 
 const route = useRoute();
 
 const invite = computed(() => {
-  return invites.find(item => item.slug === route.params.slug);
+  return invites.find(item => {
+    console.log(item)
+    return item.slug === route.params.slug
+  });
 });
 
 const themes = {
   safari: SafariTheme,
+  'wedding-white-and-black': weddingWhiteAndBlack,
   default: DefaultTheme
 };
 

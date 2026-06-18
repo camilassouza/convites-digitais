@@ -1,7 +1,7 @@
 {
-"theme": "safari",
-  "slug": "matteo-enrique",
-  "clientName": "Matteo Enrique",
+"theme": "wedding-white-and-black",
+  "slug": "camila-e-angel",
+  "clientName": "Camila e Angel",
   "eventTitle": "Hora da festa na Floresta!",
   "eventType": "Aniversário",
   "date": "2026-08-20T18:00:00",
@@ -19,5 +19,5 @@
     "text": "#2B2B2B",
     "background": "#FFFDF8"
   },
-  "cssFile": "matteo-enrique"
+  "cssFile": "camila-e-angel"
 }

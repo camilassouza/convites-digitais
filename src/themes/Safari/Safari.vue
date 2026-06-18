@@ -1,9 +1,11 @@
 <template>
   <div class="safari-theme" :style="themeVariables">
     <section class="safari-hero">
-      <span>Safari Party</span>
-      <h1>{{ invite.clientName }}</h1>
-      <h2>{{ invite.eventTitle }}</h2>
+      <h1>{{ invite.eventTitle }}</h1>
+      <h2>{{ invite.clientName }}</h2>
+
+      <div class="img"></div>
+
       <p>{{ invite.description }}</p>
     </section>
 
