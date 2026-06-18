@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Citadel';
+  src: url('../../fonts/CitadelScriptStd.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alice';
+  src: url('../../fonts/Alice-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.wedding {
+  font-family: 'Alice';
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  perspective: 1600px;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.invite {
+  position: relative;
+  width: min(100vh, 430px);
+  height: min(100dvh, 720px);
+  overflow: hidden;
+  cursor: pointer;
+  background-image: url(./img/fundo.jpeg);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-image: url(./img/fundo.jpeg);
+}
+
+.invite.open {
+  cursor: default;
+}
+
+.next-page {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  opacity: 0;
+  transition: opacity 0.4s ease 0.45s;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  background-image: url(./img/fundo.jpeg);
+  background-repeat: no-repeat;
+  background-size: 500px;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 3;
+  transition: transform 1s ease;
+}
+
+.cover-left {
+  left: 0;
+  width: 60%;
+  background: rgb(58, 34, 14);
+  transform-origin: left center;
+}
+
+.cover-right {
+  right: 0;
+  width: 40%;
+  background: rgb(58, 34, 14);
+  transform-origin: right center;
+  box-shadow: inset 40px 0px 100PX -10px #00000054;
+}
+
+.invite.open .cover-left {
+  transform: translateX(-150%) rotateY(-35deg);
+}
+
+.invite.open .cover-right {
+  transform: translateX(150%) rotateY(35deg);
+}
+
+.invite.open .next-page {
+  opacity: 1;
+}
+
+.stamp {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+}
+
+.seal {
+  position: absolute;
+  top: 120px;
+  left: -55px;
+  width: 110px;
+}
+
+.click-text {
+  position: absolute;
+  top: 170px;
+  left: -20px;
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-45deg);
+  z-index: 4;
+}
+
+h1 {
+  font-family: "Citadel";
+  font-size: 70px;
+  font-weight: 100;
+  max-width: 400px;
+  margin-top: 90px;
+  line-height: 65px;
+}
+
+
+
+.flor-one {
+  background-image: url(./img/flor.png);
+  width: 500px;
+  height: 590px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  left: -30px;
+  pointer-events: none;
+  top: 20px;
+}
+
+.descritoion {
+  margin-top: 90px;
+  width: fit-content;
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+
+
+  .icon-gold {
+    background-image: url(./img/icon.png);
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: contain;
+    margin: auto;
+  }
+}
+
+.invite-text-one {
+  max-width: 280px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.invite-text-two {
+  max-width: 280px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}

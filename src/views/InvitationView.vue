@@ -18,6 +18,7 @@ import invites from '../data/invites';
 
 import SafariTheme from '../themes/Safari/Safari.vue';
 import weddingWhiteAndBlack from '../themes/WeddingWhiteAndBlack/WeddingWhiteAndBlack.vue';
+import wedding from '../themes/Wedding/Wedding.vue';
 import DefaultTheme from '../themes/Default/DefaultTheme.vue';
 
 const route = useRoute();
@@ -32,6 +33,7 @@ const invite = computed(() => {
 const themes = {
   safari: SafariTheme,
   'wedding-white-and-black': weddingWhiteAndBlack,
+  wedding: wedding,
   default: DefaultTheme
 };
 
