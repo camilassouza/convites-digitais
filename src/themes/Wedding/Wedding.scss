@@ -13,6 +13,7 @@
 }
 
 
+
 .wedding {
   font-family: 'Alice';
   width: 100%;
@@ -62,6 +63,7 @@
   background-image: url(./img/fundo.jpeg);
   background-repeat: no-repeat;
   background-size: 500px;
+      margin-bottom: -210px;
 }
 
 .cover {
@@ -115,13 +117,12 @@
 }
 
 .click-text {
-  position: absolute;
-  top: 170px;
-  left: -20px;
-  color: #fff;
-  font-size: 22px;
-  transform: rotate(-45deg);
-  z-index: 4;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #fff;
+    font-size: 18px;
+    z-index: 4;
 }
 
 h1 {
@@ -147,6 +148,19 @@ h1 {
   pointer-events: none;
   top: 20px;
 }
+
+.flor-two {
+  background-image: url(./img/flor2.png);
+width: 380px;
+    height: 330px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(19deg);
+    left: 9px;
+    pointer-events: none;
+    top: 950px;
+  }
 
 .descritoion {
   margin-top: 90px;
@@ -178,4 +192,31 @@ h1 {
   margin-top: 10px;
   margin-bottom: 50px;
   font-size: 14px;
+}
+
+.links {
+      display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 10px;
+
+    .link-detail {
+      text-align: center;
+      i {
+        width: 20px;
+        height: 20px;
+        display: block;
+          background: rgb(58, 34, 14);
+        margin: auto;
+      }
+    }
+}
+.data {
+      font-family: "Citadel";
+    font-size: 70px;
+    font-weight: 100;
+    max-width: 400px;
+    margin-top: 90px;
+    line-height: 65px;
+    text-align: center;
 }

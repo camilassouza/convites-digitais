@@ -20,61 +20,61 @@
 
         </section>
         <section>
-          <div>
+          <div class="links">
+
+          <div class="link-detail">
             <i></i>
             <p>Confirme sua presença</p>
           </div>
 
 
-          <div>
+          <div class="link-detail">
             <i></i>
             <p>Confirme sua presença</p>
           </div>
 
 
-          <div>
+          <div class="link-detail">
             <i></i>
             <p>Confirme sua presença</p>
           </div>
 
 
-          <div>
+          <div class="link-detail">
             <i></i>
             <p>Confirme sua presença</p>
           </div>
 
 
-          <div>
+          <div class="link-detail">
             <i></i>
             <p>Confirme sua presença</p>
           </div>
 
 
-          <div>
+          <div class="link-detail">
             <i></i>
             <p>Confirme sua presença</p>
           </div>
+          </div>
 
-
-          <div>
-            <i></i>
-            <p>Confirme sua presença</p>
+          <div class="data">
+            17/07/27
           </div>
 
 
-          <div>
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
         </section>
+                  <i class="flor-two"></i>
+
       </div>
 
       <div class="cover cover-left">
         <img class="stamp" src="./img/stamp.png" alt="" />
+                <p class="click-text">clique para abrir</p>
+
       </div>
 
       <div class="cover cover-right">
-        <p class="click-text">clique para abrir</p>
         <img class="seal" src="./img/seal.png" alt="" />
       </div>
     </div>
