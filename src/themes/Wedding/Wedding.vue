@@ -4,73 +4,78 @@
       <div class="next-page">
         <section>
           <i class="flor-one"></i>
-          
+
           <div class="descritoion">
             <i class="icon-gold"></i>
-            <p>Com a bênção de Deus</p>
+            <p>Com a bênção de Deus <br>e de nossas famílias</p>
           </div>
 
           <h1>Camila & <br> Angel</h1>
 
-          <p class="invite-text-one">convidam para o seu casamento, que irá se realizar no Espaço Borcelle, no dia 17 de Junho de 2027, ás 17
-            horas.</p>
+          <p class="invite-text-one">
+            temos a alegria de convidar você para celebrar conosco a união de nossas vidas. <br>
 
-          <p class="invite-text-two">Será um prazer comemorar e celebrar esse momento tão especiais com pessoas que amamos e fazem parte da
-            nossa história</p>
+            Esperamos por você no Palacete Rosa, <br>
+            no dia 20 de fevereiro de 2027, <br>
+            às 10 horas da manhã. <br>
+          </p>
+
+          <p class="invite-text-two">Será uma honra compartilhar este momento tão especial com pessoas que fazem parte
+            da nossa história e do nosso coração.</p>
 
         </section>
         <section>
           <div class="links">
 
-          <div class="link-detail">
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
+            <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20gostaria%20de%20confirmar%20minha%20presença%20no%20casamento."
+              targer="_blank" class="link-detail">
+              <img src="./img/confirmar.svg" />
+              <p>Confirme <br>sua presença</p>
+            </a>
 
 
-          <div class="link-detail">
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
+            <a href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo" target="_blank" class="link-detail"> <img
+                src="./img/localizacao.svg" />
+              <p>Localizacao</p>
+            </a>
 
 
-          <div class="link-detail">
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
+            <a href="/" targer="_blank" class="link-detail">
+              <img src="./img/lista.svg" />
+              <p>Lista de <br>presentes</p>
+            </a>
 
 
-          <div class="link-detail">
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
+            <a href="/" targer="_blank" class="link-detail">
+              <img src="./img/recado.svg" />
+              <p>Recado para <br> os noivos</p>
+            </a>
 
 
-          <div class="link-detail">
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
+            <a href="https://wa.me/5583991730965" target="_blank" class="link-detail"> <img src="./img/noiva.svg" />
+              <p>Fale com a<br> noiva</p>
+            </a>
 
 
-          <div class="link-detail">
-            <i></i>
-            <p>Confirme sua presença</p>
-          </div>
+            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="link-detail"> <img src="./img/noivo.svg"
+                class="noivo" />
+              <p>Fale com o<br> noivo</p>
+            </a>
           </div>
 
           <div class="data">
-            17/07/27
+            20/02/27
           </div>
 
 
         </section>
-                  <i class="flor-two"></i>
+        <i class="flor-two"></i>
 
       </div>
 
       <div class="cover cover-left">
         <img class="stamp" src="./img/stamp.png" alt="" />
-                <p class="click-text">clique para abrir</p>
+        <p class="click-text">clique para abrir</p>
 
       </div>
 

@@ -15,6 +15,7 @@
 
 
 .wedding {
+  color: #3a220e;
   font-family: 'Alice';
   width: 100%;
   height: 100dvh;
@@ -24,18 +25,15 @@
   perspective: 1600px;
   background-repeat: no-repeat;
   background-size: 500px;
-  max-width: 700px;
+  max-width: 450px;
   margin: auto;
 }
 
 .invite {
   position: relative;
-  width: min(100vh, 430px);
-  height: min(100dvh, 720px);
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  cursor: pointer;
-  background-image: url(./img/fundo.jpeg);
-  background-repeat: no-repeat;
   background-size: 500px;
   background-image: url(./img/fundo.jpeg);
 }
@@ -57,13 +55,13 @@
   opacity: 0;
   transition: opacity 0.4s ease 0.45s;
 
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;
 
   background-image: url(./img/fundo.jpeg);
   background-repeat: no-repeat;
   background-size: 500px;
-      margin-bottom: -210px;
+  margin-bottom: -210px;
 }
 
 .cover {
@@ -117,12 +115,13 @@
 }
 
 .click-text {
-    position: absolute;
-    bottom: 5px;
-    left: 10px;
-    color: #fff;
-    font-size: 18px;
-    z-index: 4;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: #fff;
+  font-size: 25px;
+  z-index: 4;
+  font-family: "Citadel";
 }
 
 h1 {
@@ -130,7 +129,7 @@ h1 {
   font-size: 70px;
   font-weight: 100;
   max-width: 400px;
-  margin-top: 90px;
+  margin-top: 60px;
   line-height: 65px;
 }
 
@@ -138,29 +137,29 @@ h1 {
 
 .flor-one {
   background-image: url(./img/flor.png);
-  width: 500px;
-  height: 590px;
+  width: 230px;
+  height: 500px;
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
   transform: scaleX(-1);
-  left: -30px;
+  right: -50px;
   pointer-events: none;
-  top: 20px;
+  top: 40px;
 }
 
 .flor-two {
   background-image: url(./img/flor2.png);
-width: 380px;
-    height: 330px;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(19deg);
-    left: 9px;
-    pointer-events: none;
-    top: 950px;
-  }
+  width: 380px;
+  height: 330px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(19deg);
+  left: 9px;
+  pointer-events: none;
+  top: 1100px;
+}
 
 .descritoion {
   margin-top: 90px;
@@ -181,42 +180,53 @@ width: 380px;
 }
 
 .invite-text-one {
-  max-width: 280px;
+  max-width: 350px;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 18px;
 }
 
 .invite-text-two {
-  max-width: 280px;
+  max-width: 350px;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 14px;
 }
 
 .links {
-      display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    font-size: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 0;
+  font-size: 12px;
 
-    .link-detail {
-      text-align: center;
-      i {
-        width: 20px;
-        height: 20px;
-        display: block;
-          background: rgb(58, 34, 14);
-        margin: auto;
+  .link-detail {
+    text-align: center;
+    text-decoration: none;
+    color: #3a220e;
+
+    img {
+      max-width: 40px;
+      max-height: 40px;
+
+      &.noivo {
+            width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center 1px;
       }
     }
+
+  }
 }
+
 .data {
-      font-family: "Citadel";
-    font-size: 70px;
-    font-weight: 100;
-    max-width: 400px;
-    margin-top: 90px;
-    line-height: 65px;
-    text-align: center;
+  font-family: "Citadel";
+  font-size: 70px;
+  font-weight: 100;
+  max-width: 400px;
+  margin-top: 30px;
+  line-height: 65px;
+  text-align: center;
+  margin-bottom: 210px;
+  margin: 30px auto;
 }
