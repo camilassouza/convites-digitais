@@ -40,7 +40,7 @@
             </a>
 
 
-            <a href="/" targer="_blank" class="link-detail">
+            <a href="https://www.finalfeliz.de/camila-angel" targer="_blank" class="link-detail">
               <img src="./img/lista.svg" />
               <p>Lista de <br>presentes</p>
             </a>
