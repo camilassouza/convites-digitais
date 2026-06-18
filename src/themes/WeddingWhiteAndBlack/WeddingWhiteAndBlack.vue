@@ -126,7 +126,7 @@ export default {
       currentSection: 1,
       leavingSection: null,
       totalSections: 9,
-      eventDate: new Date('2026-02-20T12:00:00'),
+    eventDate: new Date('2027-02-20T12:00:00'),
       countdown: {
         days: '00',
         hours: '00',
