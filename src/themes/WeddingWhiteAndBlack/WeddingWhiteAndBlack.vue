@@ -1,8 +1,9 @@
 <template>
   <div class="wedding-white-and-black">
-
+ <div class="nav-left" @click="prevSection"></div>
+<div class="nav-right" @click="nextSection"></div>
     <section class="invite-section" :class="{ active: currentSection === 1, leaving: leavingSection === 1 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-envelope">
         <div class="envelope-card" :class="{ opening: leavingSection === 1 }">
           <span><img src="./img/logo-png-2.png" /></span>
@@ -13,7 +14,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 2, leaving: leavingSection === 2 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-1">
         <p class="is-letter-high letter-top">C</p>
         <p class="is-name font-default-brittany">Camila & Angel</p>
@@ -22,7 +23,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 3, leaving: leavingSection === 3 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-2">
         <p class="font-default-brittany main-script">Venha celebrar conosco esse dia especial</p>
         <div class="image-placeholder photo">
@@ -32,7 +33,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 4, leaving: leavingSection === 4 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-3">
         <div class="is-contents">
           <p class="font-default-brittany date-title">Salve a data</p>
@@ -55,7 +56,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 5, leaving: leavingSection === 5 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-4">
         <div>
           <p class="font-default-brittany is-local">Local</p>
@@ -75,7 +76,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 6, leaving: leavingSection === 6 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-5">
         <div>
           <p class="font-default-brittany">Confirme<br>sua presença</p>
@@ -85,7 +86,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 7, leaving: leavingSection === 7 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-6">
         <div>
           <p class="font-default-brittany">Seu carinho é o nosso maior presente</p>
@@ -102,7 +103,7 @@
     </section>
 
     <section class="invite-section" :class="{ active: currentSection === 8, leaving: leavingSection === 8 }"
-      @click="nextSection">
+      @click="handleNavigation">
       <div class="is-content section-7">
         <div class="content">
           <p class="font-default-brittany final-text">Estamos ansiosos para compartilhar este momento tão especial com
@@ -120,6 +121,8 @@
       </div>
     </section>
   </div>
+
+ 
 </template>
 
 <script>
@@ -154,18 +157,35 @@ export default {
   },
 
   methods: {
-    nextSection() {
-      if (this.currentSection >= this.totalSections || this.leavingSection) return;
+  handleNavigation(event) {
+    const screenWidth = window.innerWidth;
+    const clickX = event.clientX;
 
-      const current = this.currentSection;
+    if (clickX < screenWidth / 2) {
+      this.prevSection();
+    } else {
+      this.nextSection();
+    }
+  },
 
-      this.currentSection++;
-      this.leavingSection = current;
+  nextSection() {
+    if (this.currentSection >= this.totalSections || this.leavingSection) return;
 
-      setTimeout(() => {
-        this.leavingSection = null;
-      }, 800);
-    },
+    const current = this.currentSection;
+
+    this.currentSection++;
+    this.leavingSection = current;
+
+    setTimeout(() => {
+      this.leavingSection = null;
+    }, 800);
+  },
+
+  prevSection() {
+    if (this.currentSection <= 1 || this.leavingSection) return;
+
+    this.currentSection--;
+  },
 
     updateCountdown() {
       const now = new Date();

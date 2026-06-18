@@ -381,3 +381,20 @@ p {
     width: 100%;
   }
 }
+
+.nav-left,
+.nav-right {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.nav-left {
+  left: 0;
+}
+
+.nav-right {
+  right: 0;
+}
