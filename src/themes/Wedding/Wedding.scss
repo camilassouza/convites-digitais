@@ -125,12 +125,13 @@
 }
 
 h1 {
-  font-family: "Citadel";
-  font-size: 70px;
-  font-weight: 100;
-  max-width: 400px;
-  margin-top: 60px;
-  line-height: 65px;
+     font-family: "Citadel";
+    font-size: 70px;
+    font-weight: 100;
+    max-width: 400px;
+    margin-top: 50px;
+    line-height: 65px;
+    margin-bottom: 40px;
 }
 
 
@@ -145,7 +146,7 @@ h1 {
   transform: scaleX(-1);
   right: -50px;
   pointer-events: none;
-  top: 40px;
+  top: 10px;
 }
 
 .flor-two {
@@ -162,7 +163,7 @@ h1 {
 }
 
 .descritoion {
-  margin-top: 90px;
+  margin-top: 60px;
   width: fit-content;
   display: grid;
   justify-content: center;
@@ -182,7 +183,7 @@ h1 {
 .invite-text-one {
   max-width: 350px;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-size: 18px;
 }
 
@@ -191,6 +192,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 14px;
+      margin-bottom: 30px;
 }
 
 .links {
@@ -203,6 +205,8 @@ h1 {
     text-align: center;
     text-decoration: none;
     color: #3a220e;
+    background: none;
+    border: none;
 
     img {
       max-width: 40px;
@@ -229,4 +233,63 @@ h1 {
   text-align: center;
   margin-bottom: 210px;
   margin: 30px auto;
+}
+.next-page {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.page-extra {
+min-height: 100%;
+    position: relative;
+    padding: 64px 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 12px;
+    color: #4b2f1f;
+    text-decoration: none;
+    border: inherit;
+    background: inherit;
+    border-bottom: solid 2px;
+}
+
+.page-extra h2 {
+    font-family: "Citadel";
+  font-size: 60px;
+  line-height: 0.9;
+  color: #4b2f1f;
+  margin-bottom: 40px;
+}
+
+.page-extra p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #2c1d14;
+}
+
+.page-icon {
+     width: 230px;
+    position: absolute;
+    top: -28px;
+    right: -78px;
+
+    &.page-icon.icon-gift {
+    right: -110px;
+  }
+
+  &.icon-message {
+    width: 190px;
+}
+}
+
+.next-button {
+      border: none;
+    background: none;
+    font-family: "Alice";
+    font-size: 20px;
+    border-bottom: solid 1px;
 }
