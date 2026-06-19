@@ -128,16 +128,19 @@
 
           <h2>Lista de<br>Presentes</h2>
 
-          <p>
+          <p class="page-gifts__description">
             Sua presença em nossa celebração já é um presente inesquecível.
             Caso deseje nos presentear, disponibilizamos algumas opções que
             nos ajudarão a construir nosso novo lar com muito amor.
           </p>
 
-          <p class="gift-info">
-            <strong>PIX:</strong> sua-chave-pix<br>
-            <strong>Yape:</strong> seu-número-yape
-          </p>
+          <div class="gift-info">
+           <p>PIX: <span>46347478803</span> </p> 
+          <p>Yape: <span>972476231</span> </p> 
+          </div>
+
+
+          <p class="page-gifts__description-list">Ou vocë pode acessar nossa lista de presentes:</p>
 
           <a href="https://www.finalfeliz.de/camila-angel" target="_blank" class="button-link" @click.stop>
             Acessar lista
