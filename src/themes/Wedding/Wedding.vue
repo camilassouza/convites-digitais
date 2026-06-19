@@ -30,6 +30,10 @@
         </section>
 
         <section v-if="currentPage === 'menu'" class="page page-menu">
+          <button type="button" class="back-button" @click.stop="goToPage('home')">
+            <p><i></i>Voltar</p>
+          </button>
+
           <div class="page-menu__links">
             <div class="links">
 
@@ -91,16 +95,66 @@
 
           <h2>Nossa<br>História</h2>
 
-          <p>
-            Nos conhecemos enquanto eu vivia como nômade digital, viajando pelo Peru.
-            A vida nos aproximou, viajamos juntos para a Colômbia e, desde então,
-            nunca mais nos separamos.
-          </p>
+          <div class="d-flex gap-20">
+            <div class="countdown">
+              <p class="countdown__title">Faltam</p>
 
-          <p>
-            Construímos uma família linda, recebemos nosso bebê com muito amor
-            e agora celebramos mais um capítulo da nossa história: o nosso casamento.
-          </p>
+              <div class="countdown__items">
+                <div>
+                  <strong>{{ countdown.days }}</strong>
+                  <span>dias</span>
+                </div>
+
+                <div>
+                  <strong>{{ countdown.hours }}</strong>
+                  <span>horas</span>
+                </div>
+
+                <div>
+                  <strong>{{ countdown.minutes }}</strong>
+                  <span>min</span>
+                </div>
+
+                <div>
+                  <strong>{{ countdown.seconds }}</strong>
+                  <span>seg</span>
+                </div>
+              </div>
+            </div>
+            <div class="wedding-text">
+
+              <p>
+                Nossa história começou de forma inesperada, enquanto eu vivia uma das maiores
+                aventuras da minha vida como nômade digital pelo Peru. Em meio a novas culturas,
+                paisagens e experiências, nossos caminhos se cruzaram e o que parecia ser apenas
+                um encontro se transformou em algo muito maior.
+              </p>
+
+              <p>
+                Juntos seguimos explorando o mundo, compartilhando sonhos, desafios e momentos
+                inesquecíveis. Entre tantas aventuras, viajamos para a Colômbia e, desde então,
+                nunca mais nos separamos.
+              </p>
+
+              <p>
+                O amor nos levou a construir uma família linda. Hoje temos a maior bênção das
+                nossas vidas: nosso filho, que tornou nossa história ainda mais especial e cheia
+                de significado.
+              </p>
+
+              <p>
+                Agora, depois de tantas conquistas, aprendizados e momentos compartilhados,
+                chegou o dia de celebrar oficialmente a nossa união diante de Deus, de nossas
+                famílias e das pessoas que mais amamos.
+              </p>
+
+              <p>
+                E não poderíamos viver este momento sem a presença de quem faz parte da nossa
+                caminhada. Obrigado por estar aqui e por compartilhar conosco este capítulo tão
+                importante da nossa história.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section v-if="currentPage === 'dress-code'" class="page page-extra page-dress">
@@ -135,8 +189,8 @@
           </p>
 
           <div class="gift-info">
-           <p>PIX: <span>46347478803</span> </p> 
-          <p>Yape: <span>972476231</span> </p> 
+            <p>PIX: <span>46347478803</span> </p>
+            <p>Yape: <span>972476231</span> </p>
           </div>
 
 
@@ -156,18 +210,77 @@
 
           <h2>Sobre o<br>Casamento</h2>
 
-          <p>
-            Escolhemos celebrar este momento tão especial em um lugar repleto de charme,
-            história e romantismo. O Palacete será o cenário perfeito para marcar o início
-            de um novo capítulo em nossas vidas, cercados pelas pessoas que mais amamos.
-          </p>
+          <div class="wedding-info">
+            <div class="countdown">
+              <p class="countdown__title">Faltam</p>
 
-          <p>
-            Cada detalhe foi pensado com muito carinho para compartilhar com vocês
-            a alegria da nossa união. Será um dia de amor, fé e memórias inesquecíveis.
-          </p>
+              <div class="countdown__items">
+                <div>
+                  <strong>{{ countdown.days }}</strong>
+                  <span>dias</span>
+                </div>
+
+                <div>
+                  <strong>{{ countdown.hours }}</strong>
+                  <span>horas</span>
+                </div>
+
+                <div>
+                  <strong>{{ countdown.minutes }}</strong>
+                  <span>min</span>
+                </div>
+
+                <div>
+                  <strong>{{ countdown.seconds }}</strong>
+                  <span>seg</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wedding-text">
+              <p>
+                Estamos contando os dias para celebrar este momento tão especial ao lado
+                das pessoas que amamos. Nossa cerimônia acontecerá no próprio Palacete Rosa,
+                com duração aproximada de 1 hora.
+              </p>
+
+              <p>
+                Para que todos possam aproveitar cada instante com tranquilidade,
+                pedimos a gentileza de chegar com pelo menos 30 minutos de antecedência.
+              </p>
+
+              <p>
+                Escolhemos o Palacete Rosa por sua arquitetura encantadora, atmosfera
+                romântica e beleza única. O espaço reúne cerimônia e recepção em um único
+                local, proporcionando mais conforto para todos os convidados e tornando
+                cada momento ainda mais especial.
+              </p>
+
+              <p>
+                Após a cerimônia, celebraremos juntos com um menu preparado com muito
+                carinho. Serão servidos salgados fritos e assados, incluindo coxinhas,
+                bolinhos de carne, bolinhas de queijo, esfihas, empadas e quiches.
+              </p>
+
+              <p>
+                O jantar contará com sobrecoxas ao molho Rosso i Bianco, farfalle com
+                vegetais, arroz branco, batatas rústicas, farofa brasileira e salada
+                provençal, cuidadosamente preparados para tornar a celebração ainda mais
+                saborosa.
+              </p>
+
+              <p>
+                Mais do que uma festa, desejamos criar lembranças inesquecíveis ao lado
+                das pessoas que fizeram parte da nossa trajetória. Estamos ansiosos para
+                viver esse dia com você.
+              </p>
+
+              <a href="https://www.instagram.com/rep.palaceterosa/" target="_blank" class="button-link" @click.stop>
+                Conheça o Palacete Rosa
+              </a>
+            </div>
+          </div>
         </section>
-
         <section v-if="currentPage === 'recado'" class="page page-extra page-message">
           <button type="button" class="back-button" @click.stop="goBack">
             <p><i></i>Voltar</p>
@@ -211,8 +324,28 @@ export default {
   data() {
     return {
       isOpen: false,
-      currentPage: 'home'
+      currentPage: 'home',
+      weddingDate: new Date('2027-02-20T10:00:00'),
+      countdownTimer: null,
+      countdown: {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      }
     };
+  },
+
+  mounted() {
+    this.updateCountdown();
+
+    this.countdownTimer = setInterval(() => {
+      this.updateCountdown();
+    }, 1000);
+  },
+
+  beforeUnmount() {
+    clearInterval(this.countdownTimer);
   },
 
   methods: {
@@ -226,6 +359,30 @@ export default {
 
     goBack() {
       this.currentPage = 'menu';
+    },
+
+    updateCountdown() {
+      const now = new Date();
+      const distance = this.weddingDate - now;
+
+      if (distance <= 0) {
+        this.countdown = {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        };
+
+        clearInterval(this.countdownTimer);
+        return;
+      }
+
+      this.countdown = {
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((distance / (1000 * 60)) % 60),
+        seconds: Math.floor((distance / 1000) % 60)
+      };
     }
   }
 };
