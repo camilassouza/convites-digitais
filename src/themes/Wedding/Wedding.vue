@@ -98,8 +98,6 @@
           </div>
 
           <div class="data">20/02/27</div>
-
-          <i class="flor-two"></i>
         </section>
 
         <section v-if="currentPage === 'historia'" class="page page-extra page-history">
@@ -119,8 +117,6 @@
             Construímos uma família linda, recebemos nosso bebê com muito amor
             e agora celebramos mais um capítulo da nossa história: o nosso casamento.
           </p>
-
-          <i class="flor-two"></i>
         </section>
 
         <section v-if="currentPage === 'dress-code'" class="page page-extra page-dress">
@@ -137,8 +133,6 @@
             sugerimos traje social elegante em tons neutros, terrosos ou pastéis.
             O branco ficará reservado para a noiva.
           </p>
-
-          <i class="flor-two"></i>
         </section>
 
         <section v-if="currentPage === 'presentes'" class="page page-extra page-gifts">
