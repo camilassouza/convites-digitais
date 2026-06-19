@@ -168,9 +168,13 @@
           <h2>Dress<br>Code</h2>
 
           <p>
-            Sua presença é o que mais importa! Para harmonizar com a celebração,
-            sugerimos traje social elegante em tons neutros, terrosos ou pastéis.
-            O branco ficará reservado para a noiva.
+            Sua presença é o presente mais importante para nós. Para tornar nossa celebração
+            ainda mais harmoniosa, sugerimos traje social elegante em tons neutros, terrosos
+            ou pastéis.
+          </p>
+
+          <p class="white-warning">
+            🤍 A cor branca será reservada exclusivamente para a noiva.
           </p>
         </section>
 
@@ -197,7 +201,7 @@
 
           <p class="page-gifts__description-list">Ou vocë pode acessar nossa lista de presentes:</p>
 
-          <a href="https://www.finalfeliz.de/camila-angel" target="_blank" class="button-link" @click.stop>
+          <a href="https://listas.casasbahia.com.br/camilaeangel2027" target="_blank" class="button-link" @click.stop>
             Acessar lista
           </a>
         </section>
@@ -292,14 +296,12 @@
           <h2>Recado para<br>os Noivos</h2>
 
           <p>
-            Quer deixar uma mensagem especial para nós?
-            Escreva seu recado com carinho. Ficaremos muito felizes em receber
-            suas palavras neste momento tão importante.
+            Nosso grande dia ficará ainda mais especial com as palavras de quem faz parte da nossa história. Deixe uma mensagem, um conselho, uma lembrança ou um desejo para esta nova etapa das nossas vidas. Guardaremos cada recado com muito carinho. ❤️
           </p>
 
-          <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20quero%20deixar%20um%20recado%20especial%20para%20vocês:"
+          <a href="https://forms.gle/J1kq9ACStgc63RLK8"
             target="_blank" class="button-link" @click.stop>
-            Enviar recado
+            ❤️ Deixar uma mensagem para os noivos
           </a>
         </section>
       </div>
