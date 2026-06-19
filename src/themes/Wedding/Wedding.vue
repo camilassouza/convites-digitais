@@ -30,23 +30,14 @@
         </section>
 
         <section v-if="currentPage === 'menu'" class="page page-menu">
-          <div class="links">
-            <a
-              href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20gostaria%20de%20confirmar%20minha%20presença%20no%20casamento."
-              target="_blank"
-              class="link-detail"
-              @click.stop
-            >
+          <div class="page-menu__links">
+               <div class="links">
+            <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20gostaria%20de%20confirmar%20minha%20presença%20no%20casamento." target="_blank" class="link-detail" @click.stop>
               <img src="./img/confirmar.svg" />
               <p>Confirme <br>sua presença</p>
             </a>
 
-            <a
-              href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo"
-              target="_blank"
-              class="link-detail"
-              @click.stop
-            >
+            <a href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo" target="_blank" class="link-detail" @click.stop>
               <img src="./img/localizacao.svg" />
               <p>Localização</p>
             </a>
@@ -61,22 +52,12 @@
               <p>Recado para <br> os noivos</p>
             </button>
 
-            <a
-              href="https://wa.me/5583991730965"
-              target="_blank"
-              class="link-detail"
-              @click.stop
-            >
+            <a href="https://wa.me/5583991730965" target="_blank" class="link-detail" @click.stop>
               <img src="./img/noiva.svg" />
               <p>Fale com a<br> noiva</p>
             </a>
 
-            <a
-              href="https://wa.me/55XXXXXXXXXXX"
-              target="_blank"
-              class="link-detail"
-              @click.stop
-            >
+            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="link-detail" @click.stop>
               <img src="./img/noivo.svg" class="noivo" />
               <p>Fale com o<br> noivo</p>
             </a>
@@ -97,7 +78,7 @@
             </button>
           </div>
 
-          <div class="data">20/02/27</div>
+          </div>
         </section>
 
         <section v-if="currentPage === 'historia'" class="page page-extra page-history">

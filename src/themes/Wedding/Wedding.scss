@@ -327,3 +327,13 @@ h1 {
   font-size: 20px;
   border-bottom: solid 1px;
 }
+
+.page-menu {
+  height: 100%;
+  display: grid;
+  align-items: center;
+
+  .page-menu__links {
+    margin-top: -100px;
+  }
+}
