@@ -31,59 +31,62 @@
 
         <section v-if="currentPage === 'menu'" class="page page-menu">
           <div class="page-menu__links">
-               <div class="links">
-            <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20gostaria%20de%20confirmar%20minha%20presença%20no%20casamento." target="_blank" class="link-detail" @click.stop>
-              <img src="./img/confirmar.svg" />
-              <p>Confirme <br>sua presença</p>
-            </a>
+            <div class="links">
 
-            <a href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo" target="_blank" class="link-detail" @click.stop>
-              <img src="./img/localizacao.svg" />
-              <p>Localização</p>
-            </a>
+              <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20gostaria%20de%20confirmar%20minha%20presença%20no%20casamento."
+                target="_blank" class="link-detail" @click.stop>
+                <img src="./img/confirmar.svg" />
+                <p>Confirme <br>sua presença</p>
+              </a>
 
-            <button type="button" class="link-detail" @click.stop="goToPage('presentes')">
-              <img src="./img/lista.svg" />
-              <p>Lista de <br>presentes</p>
-            </button>
+              <button type="button" class="link-detail" @click.stop="goToPage('casamento')">
+                <img src="./img/igreja.png" />
+                <p>O casamento</p>
+              </button>
 
-            <button type="button" class="link-detail" @click.stop="goToPage('recado')">
-              <img src="./img/recado.svg" />
-              <p>Recado para <br> os noivos</p>
-            </button>
+              <a href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo" target="_blank" class="link-detail"
+                @click.stop>
+                <img src="./img/localizacao.svg" />
+                <p>Localização</p>
+              </a>
 
-            <a href="https://wa.me/5583991730965" target="_blank" class="link-detail" @click.stop>
-              <img src="./img/noiva.svg" />
-              <p>Fale com a<br> noiva</p>
-            </a>
+              <button type="button" class="link-detail" @click.stop="goToPage('presentes')">
+                <img src="./img/lista.svg" />
+                <p>Lista de <br>presentes</p>
+              </button>
 
-            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="link-detail" @click.stop>
-              <img src="./img/noivo.svg" class="noivo" />
-              <p>Fale com o<br> noivo</p>
-            </a>
+              <button type="button" class="link-detail" @click.stop="goToPage('dress-code')">
+                <img src="./img/dresscode.png" />
+                <p>Dress Code</p>
+              </button>
 
-            <button type="button" class="link-detail" @click.stop="goToPage('historia')">
-              <img src="./img/historia.png" />
-              <p>Nossa<br>história</p>
-            </button>
+              <button type="button" class="link-detail" @click.stop="goToPage('recado')">
+                <img src="./img/recado.svg" />
+                <p>Recado para <br> os noivos</p>
+              </button>
 
-            <button type="button" class="link-detail" @click.stop="goToPage('dress-code')">
-              <img src="./img/dresscode.png" />
-              <p>Dress Code</p>
-            </button>
+              <button type="button" class="link-detail" @click.stop="goToPage('historia')">
+                <img src="./img/historia.png" />
+                <p>Nossa<br>história</p>
+              </button>
 
-            <button type="button" class="link-detail" @click.stop="goToPage('casamento')">
-              <img src="./img/igreja.png" />
-              <p>O casamento</p>
-            </button>
-          </div>
+              <a href="https://wa.me/5583991730965" target="_blank" class="link-detail" @click.stop>
+                <img src="./img/noiva.svg" />
+                <p>Fale com a<br> noiva</p>
+              </a>
 
+              <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="link-detail" @click.stop>
+                <img src="./img/noivo.svg" class="noivo" />
+                <p>Fale com o<br> noivo</p>
+              </a>
+
+            </div>
           </div>
         </section>
 
         <section v-if="currentPage === 'historia'" class="page page-extra page-history">
           <button type="button" class="back-button" @click.stop="goBack">
-            Voltar
+            <p><i></i>Voltar</p>
           </button>
 
           <h2>Nossa<br>História</h2>
@@ -102,7 +105,7 @@
 
         <section v-if="currentPage === 'dress-code'" class="page page-extra page-dress">
           <button type="button" class="back-button" @click.stop="goBack">
-            Voltar
+            <p><i></i>Voltar</p>
           </button>
 
           <img class="page-icon icon-dress" src="./img/dresscode-interna.png" />
@@ -118,7 +121,7 @@
 
         <section v-if="currentPage === 'presentes'" class="page page-extra page-gifts">
           <button type="button" class="back-button" @click.stop="goBack">
-            Voltar
+            <p><i></i>Voltar</p>
           </button>
 
           <img class="page-icon icon-gift" src="./img/gift.png" />
@@ -136,19 +139,14 @@
             <strong>Yape:</strong> seu-número-yape
           </p>
 
-          <a
-            href="https://www.finalfeliz.de/camila-angel"
-            target="_blank"
-            class="button-link"
-            @click.stop
-          >
+          <a href="https://www.finalfeliz.de/camila-angel" target="_blank" class="button-link" @click.stop>
             Acessar lista
           </a>
         </section>
 
         <section v-if="currentPage === 'casamento'" class="page page-extra page-wedding-about">
           <button type="button" class="back-button" @click.stop="goBack">
-            Voltar
+            <p><i></i>Voltar</p>
           </button>
 
           <img class="page-icon icon-rings" src="./img/casamento.svg" />
@@ -169,7 +167,7 @@
 
         <section v-if="currentPage === 'recado'" class="page page-extra page-message">
           <button type="button" class="back-button" @click.stop="goBack">
-            Voltar
+            <p><i></i>Voltar</p>
           </button>
 
           <img class="page-icon icon-message" src="./img/mensagem.svg" />
@@ -182,12 +180,8 @@
             suas palavras neste momento tão importante.
           </p>
 
-          <a
-            href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20quero%20deixar%20um%20recado%20especial%20para%20vocês:"
-            target="_blank"
-            class="button-link"
-            @click.stop
-          >
+          <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20quero%20deixar%20um%20recado%20especial%20para%20vocês:"
+            target="_blank" class="button-link" @click.stop>
             Enviar recado
           </a>
         </section>
