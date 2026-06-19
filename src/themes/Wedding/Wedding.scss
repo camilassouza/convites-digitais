@@ -149,27 +149,27 @@
 
 h1 {
   font-family: "Citadel";
-  font-size: 70px;
-  font-weight: 100;
-  max-width: 400px;
-  margin-top: 50px;
-  line-height: 65px;
-  margin-bottom: 40px;
+font-size: 70px;
+    font-weight: 100;
+    max-width: 400px;
+    margin-top: 40px;
+    line-height: 65px;
+    margin-bottom: 30px;
 }
 
 
 
 .flor-one {
   background-image: url(./img/flor.png);
-  width: 230px;
-  height: 500px;
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: scaleX(-1);
-  right: -50px;
-  pointer-events: none;
-  top: 10px;
+    width: 250px;
+    height: 540px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    right: -50px;
+    pointer-events: none;
+    top: -20px;
 }
 
 .flor-two {
@@ -206,7 +206,7 @@ h1 {
 .invite-text-one {
   max-width: 350px;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 18px;
 }
 
@@ -215,7 +215,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .links {

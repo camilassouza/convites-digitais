@@ -92,6 +92,7 @@
           <button type="button" class="back-button" @click.stop="goBack">
             <p><i></i>Voltar</p>
           </button>
+                    <img class="page-icon icon-love" src="./img/love.svg" />
 
           <h2>Nossa<br>História</h2>
 
@@ -305,7 +306,6 @@
 
       <div class="cover cover-left">
         <img class="stamp" src="./img/stamp.png" alt="" />
-        <p class="click-text">clique para abrir</p>
       </div>
 
       <div class="cover cover-right">
