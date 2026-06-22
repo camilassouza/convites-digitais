@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html,
+body,
+#app {
+  overflow: auto !important;
+}
+
+.home {
+  font-family: 'Poppins', sans-serif;
+
+
+  section {
+    padding: 8vh 0;
+
+    &.is-bg {
+      background-color: #FCF8F3;
+      margin: 0;
+      max-width: 100%;
+
+    }
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    font-family: "Poppins", sans-serif;
+    background: #B88E2F;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px 40px;
+    color: #fff;
+    border: none;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .home-banner {
+    padding: 0 !important;
+    max-width: 100%;
+
+    .home-banner__bg {
+      background-image: url(./img/bg.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 13vh 5vh;
+
+      .home-banner__box {
+        display: grid;
+        justify-content: end;
+      }
+    }
+
+    .home-banner__content {
+      background-color: #FFF3E3;
+      padding: 6vh;
+      max-width: 400px;
+
+      h1 {
+        font-family: 'Poppins', sans-serif;
+        color: #B88E2F;
+        font-weight: 700;
+        font-size: 50px;
+        margin-bottom: 30px;
+        margin-top: 0;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .home-range__title {
+    text-align: center;
+  }
+
+  .section-description {
+    font-weight: 100;
+    margin-bottom: 50px;
+  }
+
+  .home-range__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .home-range__list-item {
+
+
+      .home-range__image {
+        height: 400px;
+        width: 100%;
+        background: red;
+        border-radius: 10px;
+      }
+
+      p {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .inspirations {
+    .inspirations__images {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 100px;
+
+      .inspirations__images__box {
+          padding: 40px 0px;
+      }
+    }
+
+    .inspirations__images__title {
+      font-size: 34px;
+      font-weight: bold;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+
+    .inspirations__images__description {
+      font-size: 15px;
+      margin-bottom: 30px;
+      font-weight: 100;
+    }
+  }
+
+  .inspirations__carrousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+
+    .inspirations__carrousel_image-highlight {
+      background: red;
+      border-radius: 8px;
+      display: grid;
+      align-items: end;
+    }
+  }
+
+  footer {
+    border-top: solid 1px;
+    padding: 10vh;
+  }
+}

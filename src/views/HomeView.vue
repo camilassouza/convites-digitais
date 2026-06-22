@@ -1,119 +1,91 @@
 <template>
   <main class="home">
-    <section class="hero">
-      <span>Convites digitais personalizados</span>
+    <section class="home-banner">
+      <div class="home-banner__bg">
+        <div class="container home-banner__box">
 
-      <h1>Crie convites digitais para momentos especiais</h1>
+          <div class="home-banner__content">
+            <p>New Arrival</p>
+            <h1>Discover Our New Collection</h1>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+              ullamcorper mattis.</p>
+            <button class="button">BUY Now </button>
+          </div>
 
-      <p>
-        Convites online para aniversários, casamentos, reuniões,
-        chá revelação, formaturas e eventos corporativos.
-      </p>
-
-      <a
-        href="https://wa.me/5511999999999?text=Olá! Quero criar um convite digital."
-        target="_blank"
-        class="button"
-      >
-        Solicitar orçamento
-      </a>
-    </section>
-
-    <section class="services">
-      <h2>O que você pode criar</h2>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Aniversários</h3>
-          <p>Convites infantis, adultos e temáticos.</p>
-        </article>
-
-        <article class="card">
-          <h3>Casamentos</h3>
-          <p>Convites elegantes com local, data e confirmação.</p>
-        </article>
-
-        <article class="card">
-          <h3>Eventos</h3>
-          <p>Reuniões, confraternizações e eventos corporativos.</p>
-        </article>
+        </div>
       </div>
     </section>
+
+    <section class="container home-range">
+      <div class="home-range__title">
+        <p class="section-title">Browse The Range</p>
+        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="home-range__list">
+        <div class="home-range__list-item">
+          <div class="home-range__image"></div>
+          <p>Dining</p>
+        </div>
+
+        <div class="home-range__list-item">
+          <div class="home-range__image"></div>
+          <p>Dining</p>
+        </div>
+
+        <div class="home-range__list-item">
+          <div class="home-range__image"></div>
+          <p>Dining</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="container home-range">
+      <div class="home-range__title">
+        <p class="section-title">Our Products</p>
+        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
+
+
+    <section class="is-bg inspirations">
+      <div class="container">
+        <div class="inspirations__images">
+          <div class="inspirations__images__box">
+            <p class="inspirations__images__title">50+ Beautiful rooms inspiration</p>
+            <p class="inspirations__images__description">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
+            <button class="button">Explore More</button>
+          </div>
+
+          <div class="inspirations__carrousel">
+            <div class="inspirations__carrousel_image-highlight">
+              <p>Bed Room <span>Inner Peace</span></p>
+            </div>
+
+            <div>
+              carrossel
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container home-range">
+      <div class="home-range__title">
+        <p class="section-title">Our Products</p>
+        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+        footer
+      </div>
+    </footer>
   </main>
 </template>
-
-<style scoped>
-.home {
-  min-height: 100vh;
-  background: #faf7f2;
-  color: #2b2b2b;
-}
-
-.hero {
-  min-height: 70vh;
-  padding: 80px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-}
-
-.hero span {
-  color: #9b6a4f;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero h1 {
-  max-width: 780px;
-  font-size: 56px;
-  line-height: 1.05;
-}
-
-.hero p {
-  max-width: 620px;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.button {
-  margin-top: 16px;
-  background: #2b2b2b;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-weight: bold;
-}
-
-.services {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 24px 80px;
-}
-
-.services h2 {
-  text-align: center;
-  margin-bottom: 32px;
-  font-size: 36px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-}
-
-.card {
-  background: white;
-  padding: 28px;
-  border-radius: 24px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
-
-.card h3 {
-  margin-bottom: 12px;
-}
-</style>
+<script>
+import './HomeView.scss';
+</script>
