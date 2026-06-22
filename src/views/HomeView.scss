@@ -47,6 +47,115 @@ body,
     margin-bottom: 8px;
   }
 
+  .header {
+  background: #fff;
+  padding: 28px 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  &__logo-icon {
+    color: #B88E2F;
+    font-size: 28px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 55px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+
+      &:hover {
+        color: #B88E2F;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 28px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  }
+
+  &__toggle,
+  &__hamburger {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+
+    &__logo {
+      font-size: 20px;
+    }
+
+    &__icons {
+      display: none;
+    }
+
+    &__hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+
+      span {
+        width: 28px;
+        height: 3px;
+        background: #000;
+        border-radius: 10px;
+      }
+    }
+
+    &__nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+      a {
+        padding: 14px 0;
+        border-bottom: 1px solid #eee;
+      }
+    }
+
+    &__toggle:checked ~ &__nav {
+      display: flex;
+    }
+  }
+}
+
   .home-banner {
     padding: 0 !important;
     max-width: 100%;
@@ -121,7 +230,7 @@ body,
       gap: 100px;
 
       .inspirations__images__box {
-          padding: 40px 0px;
+        padding: 40px 0px;
       }
     }
 
@@ -153,8 +262,207 @@ body,
     }
   }
 
-  footer {
-    border-top: solid 1px;
-    padding: 10vh;
+  .footer {
+    margin-top: 80px;
+    border-top: 1px solid #e8e8e8;
+    background: #fff;
+
+    &__content {
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    &__brand {
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.7;
+        max-width: 320px;
+      }
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #666;
+      transition: .2s;
+
+      &:hover {
+        color: #B88E2F;
+      }
+    }
+
+    &__contact,
+    &__social {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__bottom {
+      border-top: 1px solid #e8e8e8;
+      padding: 20px 0;
+      text-align: center;
+
+      p {
+        color: #999;
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &__content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+      }
+    }
   }
+
+  .inspirations__carrousel {
+  display: grid;
+  grid-template-columns: 360px 330px;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+
+  .inspirations__carrousel-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .inspirations__carrousel-image--highlight {
+    min-height: 520px;
+    border-radius: 0;
+    display: grid;
+    align-items: end;
+    position: relative;
+    background-image: url('./img/convite-1.png');
+  }
+
+  .inspirations__carrousel-image--second {
+    height: 430px;
+    background-image: url('./img/convite-2.png');
+  }
+
+  .inspirations__card {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 28px;
+    margin: 0 0 25px 25px;
+
+    p {
+      color: #616161;
+      font-size: 14px;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span {
+        width: 28px;
+        height: 1px;
+        background: #616161;
+        display: inline-block;
+      }
+    }
+
+    strong {
+      color: #3A3A3A;
+      font-size: 24px;
+      line-height: 30px;
+      display: block;
+    }
+  }
+
+  .inspirations__arrow {
+    position: absolute;
+    left: 245px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    background: #B88E2F;
+    color: #fff;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .inspirations__side {
+    position: relative;
+  }
+
+  .inspirations__next {
+    position: absolute;
+    right: -22px;
+    top: 240px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    color: #B88E2F;
+    font-size: 34px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+
+  .inspirations__dots {
+    display: flex;
+    gap: 18px;
+    margin-top: 34px;
+    align-items: center;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background: #D8D8D8;
+      border-radius: 50%;
+      display: block;
+
+      &.active {
+        width: 14px;
+        height: 14px;
+        background: transparent;
+        border: 2px solid #B88E2F;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 6px;
+          height: 6px;
+          background: #B88E2F;
+          border-radius: 50%;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+        }
+      }
+    }
+  }
+}
 }
