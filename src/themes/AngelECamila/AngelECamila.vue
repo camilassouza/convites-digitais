@@ -318,10 +318,10 @@
 </template>
 
 <script>
-import './Wedding.scss';
+import './AngelECamila.scss';
 
 export default {
-  name: 'Wedding',
+  name: 'AngelECamila',
 
   data() {
     return {

@@ -8,6 +8,10 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/wedding',
+    redirect: '/angel-e-camila'
+  },
+  {
     path: '/:slug',
     component: InvitationView
   }

@@ -18,14 +18,13 @@ import invites from '../data/invites';
 
 import SafariTheme from '../themes/Safari/Safari.vue';
 import weddingWhiteAndBlack from '../themes/WeddingWhiteAndBlack/WeddingWhiteAndBlack.vue';
-import wedding from '../themes/Wedding/Wedding.vue';
+import AngelECamila from '../themes/AngelECamila/AngelECamila.vue';
 import DefaultTheme from '../themes/Default/DefaultTheme.vue';
 
 const route = useRoute();
 
 const invite = computed(() => {
   return invites.find(item => {
-    console.log(item)
     return item.slug === route.params.slug
   });
 });
@@ -33,7 +32,7 @@ const invite = computed(() => {
 const themes = {
   safari: SafariTheme,
   'wedding-white-and-black': weddingWhiteAndBlack,
-  wedding: wedding,
+  'angel-e-camila': AngelECamila,
   default: DefaultTheme
 };
 
