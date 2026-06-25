@@ -19,5 +19,9 @@
     "text": "#2B2B2B",
     "background": "#FFFDF8"
   },
-  "cssFile": "camila-e-angel"
+  "cssFile": "camila-e-angel",
+  "image": "/images/angel-e-camila/cover.jpg",
+  "pageTitle": "Angel & Camila",
+  "pageDescription": "Venha celebrar conosco nosso dia",
+  "pageImage": "/src/themes/AngelECamila/img/seal.png" 
 }

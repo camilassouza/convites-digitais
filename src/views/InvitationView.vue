@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import invites from '../data/invites';
 
@@ -38,6 +38,54 @@ const themes = {
 
 const selectedTheme = computed(() => {
   return themes[invite.value?.theme] || DefaultTheme;
+});
+
+function setMetaTag(property, content) {
+  let tag = document.querySelector(`meta[property="${property}"]`);
+
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute('property', property);
+    document.head.appendChild(tag);
+  }
+
+  tag.setAttribute('content', content);
+}
+
+function setMetaName(name, content) {
+  let tag = document.querySelector(`meta[name="${name}"]`);
+
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute('name', name);
+    document.head.appendChild(tag);
+  }
+
+  tag.setAttribute('content', content);
+}
+
+watchEffect(() => {
+  if (!invite.value) return;
+
+  const title = invite.value.pageTitle || invite.value.clientName;
+  const description = invite.value.pageDescription;
+  const image = `${window.location.origin}${invite.value.image}`;
+  const url = window.location.href;
+
+  document.title = title;
+
+  setMetaName('description', description);
+
+  setMetaTag('og:title', title);
+  setMetaTag('og:description', description);
+  setMetaTag('og:image', image);
+  setMetaTag('og:url', url);
+  setMetaTag('og:type', 'website');
+
+  setMetaName('twitter:card', 'summary_large_image');
+  setMetaName('twitter:title', title);
+  setMetaName('twitter:description', description);
+  setMetaName('twitter:image', image);
 });
 </script>
 
