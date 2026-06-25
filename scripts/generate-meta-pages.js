@@ -37,7 +37,8 @@ files.forEach(file => {
   const imageUrl = image.startsWith('http')
     ? image
     : `${DOMAIN}${image}`;
-
+  console.log(imageUrl)
+  
   const url = `${DOMAIN}/${invite.slug}`;
 
   const html = template
