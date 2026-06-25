@@ -18,6 +18,14 @@ files.forEach(file => {
     fs.readFileSync(path.join(invitesPath, file), 'utf8')
   );
 
+  const favicon = invite.favicon || '/favicon.ico';
+
+  const faviconUrl = favicon.startsWith('http')
+  ? favicon
+  : `${DOMAIN}${favicon}`;
+
+  console.log(faviconUrl)
+
   const title =
     invite.pageTitle ||
     invite.eventTitle ||
@@ -45,7 +53,8 @@ files.forEach(file => {
     .replaceAll('%TITLE%', title)
     .replaceAll('%DESCRIPTION%', description)
     .replaceAll('%IMAGE%', imageUrl)
-    .replaceAll('%URL%', url);
+    .replaceAll('%URL%', url)
+    .replaceAll('%FAVICON%', faviconUrl);;
 
   const folder = path.join(distPath, invite.slug);
 
