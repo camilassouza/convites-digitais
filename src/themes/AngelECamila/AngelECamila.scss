@@ -189,11 +189,13 @@
   }
 
   .descritoion {
-    margin-top: 60px;
+    margin-top: 40px;
     width: fit-content;
     display: grid;
     justify-content: center;
     gap: 30px;
+    max-width: 150px;
+    text-align: center;
 
 
     .icon-gold {
@@ -324,6 +326,7 @@
     margin-bottom: 30px;
     line-height: 56px;
     margin-top: 40px;
+    max-width: 200px;
   }
 
   .page-extra p {

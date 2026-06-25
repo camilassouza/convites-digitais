@@ -7,301 +7,235 @@
 
           <div class="descritoion">
             <i class="icon-gold"></i>
-            <p>Com a bênção de Deus <br>e de nossas famílias</p>
+            <p>{{ t.blessing }}</p>
           </div>
 
           <h1>Camila & <br> Angel</h1>
 
           <p class="invite-text-one">
-            Temos a alegria de convidar você para celebrar conosco a união de nossas vidas. <br>
-            Esperamos por você no Palacete Rosa, <br>
-            no dia 20 de fevereiro de 2027, <br>
-            às 10 horas da manhã. <br>
+            {{ t.inviteTextOne }} <br>
+            {{ t.inviteTextLocation }}
           </p>
 
           <p class="invite-text-two">
-            Será uma honra compartilhar este momento tão especial com pessoas que fazem parte
-            da nossa história e do nosso coração.
+            {{ t.inviteTextTwo }}
           </p>
 
           <button type="button" class="next-button" @click.stop="goToPage('menu')">
-            Ver detalhes
+            {{ t.details }}
           </button>
         </section>
 
         <section v-if="currentPage === 'menu'" class="page page-menu">
           <button type="button" class="back-button" @click.stop="goToPage('home')">
-            <p><i></i>Voltar</p>
+            <p><i></i>{{ t.back }}</p>
           </button>
 
           <div class="page-menu__links">
             <div class="links">
-
-              <a href="https://wa.me/5583991730965?text=Olá%20Camila%20e%20Angel,%20gostaria%20de%20confirmar%20minha%20presença%20no%20casamento."
-                target="_blank" class="link-detail" @click.stop>
+              <a :href="confirmWhatsappLink" target="_blank" class="link-detail" @click.stop>
                 <img src="./img/confirmar.svg" />
-                <p>Confirme <br>sua presença</p>
+                <p v-html="formatText(t.confirmPresence)"></p>
               </a>
 
               <button type="button" class="link-detail" @click.stop="goToPage('casamento')">
                 <img src="./img/igreja.png" />
-                <p>O casamento</p>
+                <p>{{ t.wedding }}</p>
               </button>
 
-              <a href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo" target="_blank" class="link-detail"
-                @click.stop>
+              <a href="https://maps.google.com/?q=Palacete+Rosa+São+Paulo" target="_blank" class="link-detail" @click.stop>
                 <img src="./img/localizacao.svg" />
-                <p>Localização</p>
+                <p>{{ t.location }}</p>
               </a>
 
               <button type="button" class="link-detail" @click.stop="goToPage('presentes')">
                 <img src="./img/lista.svg" />
-                <p>Lista de <br>presentes</p>
+                <p v-html="formatText(t.gifts)"></p>
               </button>
 
               <button type="button" class="link-detail" @click.stop="goToPage('dress-code')">
                 <img src="./img/dresscode.png" />
-                <p>Dress Code</p>
+                <p>{{ t.dressCode }}</p>
               </button>
 
               <button type="button" class="link-detail" @click.stop="goToPage('recado')">
                 <img src="./img/recado.svg" />
-                <p>Recado para <br> os noivos</p>
+                <p v-html="formatText(t.messageToBrideAndGroom)"></p>
               </button>
 
               <button type="button" class="link-detail" @click.stop="goToPage('historia')">
                 <img src="./img/historia.png" />
-                <p>Nossa<br>história</p>
+                <p v-html="formatText(t.ourHistory)"></p>
               </button>
 
               <a href="https://wa.me/5583991730965" target="_blank" class="link-detail" @click.stop>
                 <img src="./img/noiva.svg" />
-                <p>Fale com a<br> noiva</p>
+                <p v-html="formatText(t.talkToBride)"></p>
               </a>
 
-              <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="link-detail" @click.stop>
+              <a href="https://wa.me/51991802848" target="_blank" class="link-detail" @click.stop>
                 <img src="./img/noivo.svg" class="noivo" />
-                <p>Fale com o<br> noivo</p>
+                <p v-html="formatText(t.talkToGroom)"></p>
               </a>
-
             </div>
           </div>
         </section>
 
         <section v-if="currentPage === 'historia'" class="page page-extra page-history">
           <button type="button" class="back-button" @click.stop="goBack">
-            <p><i></i>Voltar</p>
+            <p><i></i>{{ t.back }}</p>
           </button>
-                    <img class="page-icon icon-love" src="./img/love.svg" />
 
-          <h2>Nossa<br>História</h2>
+          <img class="page-icon icon-love" src="./img/love.svg" />
+
+          <h2 v-html="formatTitle(t.historyTitle)"></h2>
 
           <div class="d-flex gap-20">
             <div class="countdown">
-              <p class="countdown__title">Faltam</p>
+              <p class="countdown__title">{{ t.remaining }}</p>
 
               <div class="countdown__items">
                 <div>
                   <strong>{{ countdown.days }}</strong>
-                  <span>dias</span>
+                  <span>{{ t.days }}</span>
                 </div>
 
                 <div>
                   <strong>{{ countdown.hours }}</strong>
-                  <span>horas</span>
+                  <span>{{ t.hours }}</span>
                 </div>
 
                 <div>
                   <strong>{{ countdown.minutes }}</strong>
-                  <span>min</span>
+                  <span>{{ t.minutes }}</span>
                 </div>
 
                 <div>
                   <strong>{{ countdown.seconds }}</strong>
-                  <span>seg</span>
+                  <span>{{ t.seconds }}</span>
                 </div>
               </div>
             </div>
+
             <div class="wedding-text">
-
-              <p>
-                Nossa história começou de forma inesperada, enquanto eu vivia uma das maiores
-                aventuras da minha vida como nômade digital pelo Peru. Em meio a novas culturas,
-                paisagens e experiências, nossos caminhos se cruzaram e o que parecia ser apenas
-                um encontro se transformou em algo muito maior.
-              </p>
-
-              <p>
-                Juntos seguimos explorando o mundo, compartilhando sonhos, desafios e momentos
-                inesquecíveis. Entre tantas aventuras, viajamos para a Colômbia e, desde então,
-                nunca mais nos separamos.
-              </p>
-
-              <p>
-                O amor nos levou a construir uma família linda. Hoje temos a maior bênção das
-                nossas vidas: nosso filho, que tornou nossa história ainda mais especial e cheia
-                de significado.
-              </p>
-
-              <p>
-                Agora, depois de tantas conquistas, aprendizados e momentos compartilhados,
-                chegou o dia de celebrar oficialmente a nossa união diante de Deus, de nossas
-                famílias e das pessoas que mais amamos.
-              </p>
-
-              <p>
-                E não poderíamos viver este momento sem a presença de quem faz parte da nossa
-                caminhada. Obrigado por estar aqui e por compartilhar conosco este capítulo tão
-                importante da nossa história.
-              </p>
+              <p>{{ t.historyParagraphOne }}</p>
+              <p>{{ t.historyParagraphTwo }}</p>
+              <p>{{ t.historyParagraphThree }}</p>
+              <p>{{ t.historyParagraphFour }}</p>
+              <p>{{ t.historyParagraphFive }}</p>
             </div>
           </div>
         </section>
 
         <section v-if="currentPage === 'dress-code'" class="page page-extra page-dress">
           <button type="button" class="back-button" @click.stop="goBack">
-            <p><i></i>Voltar</p>
+            <p><i></i>{{ t.back }}</p>
           </button>
 
           <img class="page-icon icon-dress" src="./img/dresscode-interna.png" />
 
-          <h2>Dress<br>Code</h2>
+          <h2 v-html="formatTitle(t.dressCodeTitle)"></h2>
 
-          <p>
-            Sua presença é o presente mais importante para nós. Para tornar nossa celebração
-            ainda mais harmoniosa, sugerimos traje social elegante em tons neutros, terrosos
-            ou pastéis.
-          </p>
+          <p>{{ t.dressCodeText }}</p>
 
           <p class="white-warning">
-            🤍 A cor branca será reservada exclusivamente para a noiva.
+            {{ t.whiteWarning }}
           </p>
         </section>
 
         <section v-if="currentPage === 'presentes'" class="page page-extra page-gifts">
           <button type="button" class="back-button" @click.stop="goBack">
-            <p><i></i>Voltar</p>
+            <p><i></i>{{ t.back }}</p>
           </button>
 
           <img class="page-icon icon-gift" src="./img/gift.png" />
 
-          <h2>Lista de<br>Presentes</h2>
+          <h2 v-html="formatTitle(t.giftsTitle)"></h2>
 
           <p class="page-gifts__description">
-            Sua presença em nossa celebração já é um presente inesquecível.
-            Caso deseje nos presentear, disponibilizamos algumas opções que
-            nos ajudarão a construir nosso novo lar com muito amor.
+            {{ t.giftsDescription }}
           </p>
 
           <div class="gift-info">
-            <p>PIX: <span>46347478803</span> </p>
-            <p>Yape: <span>972476231</span> </p>
+            <p>PIX: <span>46347478803</span></p>
+            <p>Yape: <span>972476231</span></p>
           </div>
 
-
-          <p class="page-gifts__description-list">Ou vocë pode acessar nossa lista de presentes:</p>
+          <p class="page-gifts__description-list">
+            {{ t.giftsListText }}
+          </p>
 
           <a href="https://listas.casasbahia.com.br/camilaeangel2027" target="_blank" class="button-link" @click.stop>
-            Acessar lista
+            {{ t.accessList }}
           </a>
         </section>
 
         <section v-if="currentPage === 'casamento'" class="page page-extra page-wedding-about">
           <button type="button" class="back-button" @click.stop="goBack">
-            <p><i></i>Voltar</p>
+            <p><i></i>{{ t.back }}</p>
           </button>
 
           <img class="page-icon icon-rings" src="./img/casamento.svg" />
 
-          <h2>Sobre o<br>Casamento</h2>
+          <h2 v-html="formatTitle(t.weddingTitle)"></h2>
 
           <div class="wedding-info">
             <div class="countdown">
-              <p class="countdown__title">Faltam</p>
+              <p class="countdown__title">{{ t.remaining }}</p>
 
               <div class="countdown__items">
                 <div>
                   <strong>{{ countdown.days }}</strong>
-                  <span>dias</span>
+                  <span>{{ t.days }}</span>
                 </div>
 
                 <div>
                   <strong>{{ countdown.hours }}</strong>
-                  <span>horas</span>
+                  <span>{{ t.hours }}</span>
                 </div>
 
                 <div>
                   <strong>{{ countdown.minutes }}</strong>
-                  <span>min</span>
+                  <span>{{ t.minutes }}</span>
                 </div>
 
                 <div>
                   <strong>{{ countdown.seconds }}</strong>
-                  <span>seg</span>
+                  <span>{{ t.seconds }}</span>
                 </div>
               </div>
             </div>
 
             <div class="wedding-text">
-              <p>
-                Estamos contando os dias para celebrar este momento tão especial ao lado
-                das pessoas que amamos. Nossa cerimônia acontecerá no próprio Palacete Rosa,
-                com duração aproximada de 1 hora.
-              </p>
-
-              <p>
-                Para que todos possam aproveitar cada instante com tranquilidade,
-                pedimos a gentileza de chegar com pelo menos 30 minutos de antecedência.
-              </p>
-
-              <p>
-                Escolhemos o Palacete Rosa por sua arquitetura encantadora, atmosfera
-                romântica e beleza única. O espaço reúne cerimônia e recepção em um único
-                local, proporcionando mais conforto para todos os convidados e tornando
-                cada momento ainda mais especial.
-              </p>
-
-              <p>
-                Após a cerimônia, celebraremos juntos com um menu preparado com muito
-                carinho. Serão servidos salgados fritos e assados, incluindo coxinhas,
-                bolinhos de carne, bolinhas de queijo, esfihas, empadas e quiches.
-              </p>
-
-              <p>
-                O jantar contará com sobrecoxas ao molho Rosso i Bianco, farfalle com
-                vegetais, arroz branco, batatas rústicas, farofa brasileira e salada
-                provençal, cuidadosamente preparados para tornar a celebração ainda mais
-                saborosa.
-              </p>
-
-              <p>
-                Mais do que uma festa, desejamos criar lembranças inesquecíveis ao lado
-                das pessoas que fizeram parte da nossa trajetória. Estamos ansiosos para
-                viver esse dia com você.
-              </p>
+              <p>{{ t.weddingParagraphOne }}</p>
+              <p>{{ t.weddingParagraphTwo }}</p>
+              <p>{{ t.weddingParagraphThree }}</p>
+              <p>{{ t.weddingParagraphFour }}</p>
+              <p>{{ t.weddingParagraphFive }}</p>
+              <p>{{ t.weddingParagraphSix }}</p>
 
               <a href="https://www.instagram.com/rep.palaceterosa/" target="_blank" class="button-link" @click.stop>
-                Conheça o Palacete Rosa
+                {{ t.knowPalacete }}
               </a>
             </div>
           </div>
         </section>
+
         <section v-if="currentPage === 'recado'" class="page page-extra page-message">
           <button type="button" class="back-button" @click.stop="goBack">
-            <p><i></i>Voltar</p>
+            <p><i></i>{{ t.back }}</p>
           </button>
 
           <img class="page-icon icon-message" src="./img/mensagem.svg" />
 
-          <h2>Recado para<br>os Noivos</h2>
+          <h2 v-html="formatTitle(t.messageTitle)"></h2>
 
           <p>
-            Nosso grande dia ficará ainda mais especial com as palavras de quem faz parte da nossa história. Deixe uma mensagem, um conselho, uma lembrança ou um desejo para esta nova etapa das nossas vidas. Guardaremos cada recado com muito carinho. ❤️
+            {{ t.messageText }}
           </p>
 
-          <a href="https://forms.gle/J1kq9ACStgc63RLK8"
-            target="_blank" class="button-link" @click.stop>
-            ❤️ Deixar uma mensagem para os noivos
+          <a href="https://forms.gle/J1kq9ACStgc63RLK8" target="_blank" class="button-link" @click.stop>
+            {{ t.leaveMessage }}
           </a>
         </section>
       </div>
@@ -316,9 +250,9 @@
     </div>
   </div>
 </template>
-
 <script>
 import './AngelECamila.scss';
+import translations from './translations';
 
 export default {
   name: 'AngelECamila',
@@ -336,6 +270,22 @@ export default {
         seconds: 0
       }
     };
+  },
+
+  computed: {
+    lang() {
+      const lang = this.$route?.query?.lang || 'pt';
+      console.log(lang)
+      return ['pt', 'es'].includes(lang) ? lang : 'pt';
+    },
+
+    t() {
+      return translations[this.lang];
+    },
+
+    confirmWhatsappLink() {
+      return `https://wa.me/5583991730965?text=${encodeURIComponent(this.t.whatsappConfirmMessage)}`;
+    }
   },
 
   mounted() {
@@ -361,6 +311,14 @@ export default {
 
     goBack() {
       this.currentPage = 'menu';
+    },
+
+    formatText(text) {
+      return text.replace(/\n/g, '<br>');
+    },
+
+    formatTitle(text) {
+      return text;
     },
 
     updateCountdown() {
